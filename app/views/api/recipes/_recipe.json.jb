@@ -11,5 +11,6 @@
               ingredients: recipe.ingredients_list,
               directions: recipe.directions_list,
               prep_time: recipe.formatted_prep_time
-              }
+              },
+  current_user: current_user
 }
