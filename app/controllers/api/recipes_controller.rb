@@ -1,5 +1,9 @@
 class Api::RecipesController < ApplicationController
   def index
+    puts "=" * 50
+    p current_user
+    puts "=" * 50
+
     @recipes = Recipe.all
 
     search_term = params[:search]
