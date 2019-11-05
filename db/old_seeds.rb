@@ -1,9 +1,3 @@
-User.create!([
-  {name: "Joe Cool", email: "joe@gmail.com", password: "password", password_confirmation: "password"},
-  {name: "Franklin", email: "franklin@gmail.com", password: "password", password_confirmation: "password"},
-  {name: "Buttercup", email: "buttercup@gmail.com", password: "password", password_confirmation: "password"}
-])
-
 Recipe.create!([
   {title: "Burger", chef: "Mac Tonight", ingredients: "car, money", directions: "drive to Mcdondal's, order burger from fiberglass clown, pull up to the window, exchange burger for money", image_url: "https://i.kym-cdn.com/photos/images/original/000/999/092/f7e.jpg", prep_time: 5},
   {title: "Lasagna", chef: "Garfield", ingredients: "noodles, tomato paste, meat, onions, garlic, other stuff", directions: "layer noodles, add sauce, layer noodles, add meat, layer noodles, add onions, layer noodles, add other stuff, finish with a layer of noodles", image_url: "https://media.giphy.com/media/mnsrLVomCvdWaqF0oF/giphy.gif", prep_time: 60},
@@ -15,4 +9,9 @@ Recipe.create!([
   {title: "Butter", chef: "butter Mcgoo", ingredients: "butter, sun", directions: "put outside, let it melt", image_url: "https://cdn-prod.medicalnewstoday.com/content/images/articles/321/321990/close-up-of-block-of-butter-being-sliced-may-raise-cholesterol.jpg", prep_time: 3},
   {title: "Popcorn", chef: "Orville", ingredients: "bag, corn", directions: "microwave", image_url: "https://www.simplyrecipes.com/wp-content/uploads/2015/01/perfect-popcorn-vertical-b-1800.jpg", prep_time: 4},
   {title: "Suasages", chef: "Jimmy Johns", ingredients: "tires, water, dog fur, love", directions: "mix ingredients, mash in casing, don't think about it too much", image_url: "https://s23209.pcdn.co/wp-content/uploads/2018/09/Grilled-Sausages-Peppers-and-PotatoesIMG_5723-600x315-cropped.jpg", prep_time: 17}
+])
+User.create!([
+  {name: "Joe Cool", email: "joe@gmail.com", password_digest: "$2a$12$xNDw0tnyZFxZqPxkUcUciuX7nIFMDs6CtFZXYbQCcy7SOP6usM.Da"},
+  {name: "Franklin", email: "franklin@gmail.com", password_digest: "$2a$12$ARVXCb5KbxBR7aAWGBzsB.Qzeb3AvfNhZaxhHbgMwKOP/GoQ0XryW"},
+  {name: "Buttercup", email: "buttercup@gmail.com", password_digest: "$2a$12$0b4vR7Pr7CTuvawgk8OcXu6DUeizmlF0Qa036fKURiAkNw2Wawlt2"}
 ])

@@ -1,4 +1,9 @@
 class Recipe < ApplicationRecord
+  validates :title, uniqueness: true
+  validates :ingredients, presence: true
+  validates :directions, presence: true
+  validates :prep_time, presence: true
+  
   def ingredients_list
     ingredients.split(", ")
   end

@@ -1,5 +1,12 @@
 class Api::RecipesController < ApplicationController
   def index
+    puts "*" * 50
+    puts "*" * 50
+    p current_user
+    puts "*" * 50
+    puts "*" * 50
+    
+    
     @recipes = Recipe.all
 
     search_term = params[:search]
@@ -22,8 +29,12 @@ class Api::RecipesController < ApplicationController
                          image_url: params[:image_url]
                         )
 
-    @recipe.save
-    render 'show.json.jb'
+    if @recipe.save
+      render 'show.json.jb'
+    else
+      render json: {errors: @recipe.errors.full_messages}, status: :unprocessable_entity
+    end
+
   end
 
   def show
